@@ -1,0 +1,28 @@
+<form [formGroup]="otpValidate" (ngSubmit)="onSubmit()">
+    <div class="otp">
+      <label for="">otp:</label>
+      <input
+        type="text"
+        formControlName="otp"
+        required
+        placeholder="otp"
+      />
+
+      <span
+    *ngIf="otpValidate.controls.otp?.invalid && (otpValidate.controls.otp?.dirty || otpValidate.controls.otp?.touched)"
+    class="alert alert-danger"
+  >
+    <span *ngIf="otpValidate.controls.otp.errors?.['required']">otp is required.</span>
+    <span *ngIf="otpValidate.controls.otp.errors?.['otp']">
+      email must be valid.
+    </span>
+  </span>
+    </div>
+    
+
+  
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>

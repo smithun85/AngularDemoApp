@@ -1,0 +1,11 @@
+.login{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #dda2a2;
+  }
+  .btn{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
